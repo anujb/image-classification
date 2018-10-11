@@ -51,6 +51,21 @@
     This is not Ed Sheeran (0.048971623)
     ```
 
+`
+
+* Label Image with Trained Model
+    ```bash
+    export IMAGE_TAG=1.8
+    cd flask-app
+
+    # build
+    docker build -t "image_classifier:Dockerfile" . 
+    
+    # run
+    docker run -p 5000:5000 detect_image:Dockerfile
+    
+
+    ```
 ### Setup Kubernetes
 
 * Using [acs-engine](https://github.com/Azure/acs-engine) with kubernetes v1.11.3
